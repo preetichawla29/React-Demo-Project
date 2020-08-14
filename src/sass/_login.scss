@@ -1,0 +1,103 @@
+.login-form {
+  margin: 50px auto;
+  width: 30%;
+
+  .form-label {
+    margin-bottom: 20px;
+  
+    label {
+      font-size: 1em;
+      text-transform: capitalize;
+      width: 100%;
+    }
+
+    .form-text {
+      border: 1px solid #e5e5e5;
+      border-radius: 0;
+      font-size: 18px;
+      line-height: 18px;
+      margin: 10px 0 2px;
+      outline: 0;
+      padding: 12px 16px;
+      width: 100%;
+    }
+  }
+
+  .form-submit {
+    background-color: #69dcfb;
+    border: 1px solid transparent;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 18px;
+    margin-right: 10px;
+    text-align: center;
+    width: 30%;
+  }
+}
+
+.register-form {
+  @extend .login-form;
+
+  .form-label {
+    margin-bottom: 0;
+  }
+
+  .createaccount {
+    margin-top: 20px;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+
+#register, #login {
+  width: 300px;
+  border: 1px solid #d6d7da;
+  padding: 0px 15px 15px 15px;
+  border-radius: 5px;
+  font-family: arial;
+  line-height: 16px;
+  color: #333333;
+  font-size: 14px;
+  background: #ffffff;
+  margin: 20px auto;
+}
+
+form label, form input {
+  display: block;
+  //margin-bottom: 10px;
+  width: 90%
+}
+
+form input {
+  padding: 10px;
+  border: solid 1px #BDC7D8;
+
+}
+
+.button {
+  background-color: #00BFFF;
+  border-color: #3ac162;
+  font-weight: bold;
+  padding: 12px 15px;
+  color: #ffffff;
+}
+
+.errorMsg {
+  color: #cc0000;
+  margin-bottom: 12px;
+}
+
+.sucessMsg {
+  color: #6B8E23;
+  margin-bottom: 10px;
+}

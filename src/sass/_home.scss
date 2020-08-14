@@ -1,0 +1,20 @@
+.homepage {
+  margin: 50px auto;
+  width: 80%;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 20px;
+      width: 33%;
+    }
+  }
+
+  iframe {
+    margin-top: 20px;
+  }
+}

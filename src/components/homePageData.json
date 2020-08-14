@@ -1,0 +1,28 @@
+[
+    {
+      "title": "React",
+      "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis auctor odio vel faucibus. Maecenas ut risus id lacus mattis fringilla ac eget elit. Praesent eu placerat neque. Maecenas ante lorem, gravida at iaculis eget, condimentum in urna. Ut eget auctor odio</p>",
+      "videoLink": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4",
+      "embeddedLink": "https://www.youtube.com/embed/MhkGQAoc7bc"
+    },
+    {
+        "title": "Learn React",
+        "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis auctor odio vel faucibus. Maecenas ut risus id lacus mattis fringilla ac eget elit. Praesent eu placerat neque. Maecenas ante lorem, gravida at iaculis eget, condimentum in urna. Ut eget auctor odio</p>",
+        "videoLink": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "embeddedLink": "https://www.youtube.com/embed/QFaFIcGhPoM"
+      },
+
+      {
+        "title": "React",
+        "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis auctor odio vel faucibus. Maecenas ut risus id lacus mattis fringilla ac eget elit. Praesent eu placerat neque. Maecenas ante lorem, gravida at iaculis eget, condimentum in urna. Ut eget auctor odio</p>",
+        "videoLink": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        "embeddedLink": "https://www.youtube.com/embed/sBws8MSXN7A"
+      },
+
+      {
+        "title": "React",
+        "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis auctor odio vel faucibus. Maecenas ut risus id lacus mattis fringilla ac eget elit. Praesent eu placerat neque. Maecenas ante lorem, gravida at iaculis eget, condimentum in urna. Ut eget auctor odio</p>",
+        "videoLink": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        "embeddedLink": "https://www.youtube.com/embed/HUYZiOhvgvo"
+      }
+      ]

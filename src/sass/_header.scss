@@ -1,0 +1,27 @@
+header {
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  nav {
+    display: flex;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      margin: 20px 0 0;
+    }
+
+    a {
+      color: #000;
+      font-size: 1em;
+      padding: 0 10px;
+      text-decoration: none;
+    }
+  }
+}
