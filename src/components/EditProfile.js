@@ -31,7 +31,6 @@ class RegisterForm extends Component {
           fields["password"] = "";
           fields["confirmpassword"] = "";
           this.setState({fields:fields});
-          alert("Form submitted");
       }
 
     }
@@ -60,8 +59,7 @@ class RegisterForm extends Component {
       }
 
       if (typeof fields["emailid"] !== "undefined") {
-        //regular expression for email validation
-        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        const pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
         if (!pattern.test(fields["emailid"])) {
           formIsValid = false;
           errors["emailid"] = "*Please enter valid email-ID.";
@@ -98,12 +96,8 @@ class RegisterForm extends Component {
         errors: errors
       });
       return formIsValid;
-
-
     }
-
-
-
+  
   render() {
     return (
     <div id="main-registration-container">

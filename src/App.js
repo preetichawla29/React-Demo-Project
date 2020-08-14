@@ -11,42 +11,34 @@ import Logout from './components/Login/Logout';
 import { BrowserRouter as Router, Redirect } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 
-// const auth = {
-//   isAuthenticated: false,
-//   autenticate(cb) {
-//     this.isAuthenticated = true;
-//     setTimeout(cb, 300);
-//   }
-// }
-
-function isAuth(){
-  const sessionToken=localStorage.getItem('token')
+function isAuth() {
+  const sessionToken = localStorage.getItem('token')
   return sessionToken;
 }
-const PrivateRoute = ({ component: Component, ...rest }) => {  
-  
+const PrivateRoute = ({ component: Component, ...rest }) => {
+
   return (
     <Route {...rest} render={props => (
       isAuth() !== null ? (
-      < Component  {...props} />
+        < Component  {...props} />
       ) : (
-            <Redirect to={{
-              pathname: '/login',
-              state: { from: props.location }
-              }}
-            />
-          )
-      )} 
+          <Redirect to={{
+            pathname: '/login',
+            state: { from: props.location }
+          }}
+          />
+        )
+    )}
     />
   )
 };
 
-export default class App extends React.Component {
+export default class App extends Component {
   state = {
     loggedIn: false,
   };
 
-  render(){
+  render() {
     return (
       <Router>
         <Header />
@@ -56,7 +48,7 @@ export default class App extends React.Component {
         <Route path="/article" exact component={Article} />
         <Route path="/logout" exact component={Logout} />
         <Route path="/UserProfile" component={UserProfile} />
-        <PrivateRoute exact  path="/EditProfile" component={EditProfile} />
+        <PrivateRoute exact path="/EditProfile" component={EditProfile} />
       </Router>
     )
   }

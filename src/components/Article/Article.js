@@ -68,10 +68,10 @@ class Article extends Component {
               <li className="artcle-group" key={i}>
                 <div><img src={`http://localhost:80${item.field_image}`} alt={item.image + '  image'} /> </div>
                 <div>
-                <div><b>{item.title} </b></div>
-                <div className="article-desc" dangerouslySetInnerHTML={{ __html: item.body }} />
+                  <div><b>{item.title} </b></div>
+                  <div className="article-desc" dangerouslySetInnerHTML={{ __html: item.body }} />
                 </div>
-                
+
               </li>
 
             )}
