@@ -4,10 +4,10 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - master  # Trigger on push to the main branch
+      - master  # Trigger on push to the master branch
   pull_request:
     branches:
-      - master  # Trigger on pull request to the main branch
+      - master  # Trigger on pull request to the master branch
 
 jobs:
   # CI job: Build and Test
@@ -16,18 +16,18 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Checks out the repository
+        uses: actions/checkout@v3  # Updated to the latest version
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # Updated to the latest version
         with:
-          node-version: '14'  # Set Node.js version (example for Node.js)
+          node-version: '14'  # Specify Node.js version (change if needed)
 
       - name: Install dependencies
         run: npm install  # Install dependencies
 
       - name: Run tests
-        run: npm test  # Run tests (change to your test script)
+        run: npm test  # Uncomment and modify this if you have tests
 
   # CD job: Deploy
   deploy:
@@ -37,9 +37,11 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Deploy to Production
-        run: |
-          echo "Deploying application to production..."
-          # Add your deploy commands here, e.g., SSH to server or push to cloud service
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        run: npx vercel --prod --token $VERCEL_TOKEN
